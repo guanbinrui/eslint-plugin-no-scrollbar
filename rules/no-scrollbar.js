@@ -12,8 +12,8 @@ module.exports = {
   create(context) {
     return {
       'Property[key]': node => {
-        const keyName = node.key.type === 'Literal' ? node.key.value : node.key.name;
-        if (keyName.endsWith('::-webkit-scrollbar')) {
+        const selector = node.key.type === 'Literal' ? node.key.value : undefined;
+        if (typeof selector === 'string' && selector.endsWith('::-webkit-scrollbar')) {
           context.report({
             node,
             message: "Use '[data-no-scrollbar]' instead of selectors ending with '::webkit-scrollbar'",
