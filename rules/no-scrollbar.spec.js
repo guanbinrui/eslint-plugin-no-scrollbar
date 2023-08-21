@@ -4,7 +4,7 @@ const noScrollbarRule = require("./no-scrollbar.js");
 const ruleTester = new RuleTester();
 
 const ERROR = {
-  message: "Use '[data-no-scrollbar]' instead of '::webkit-scrollbar'",
+  message: "Use '[data-no-scrollbar]' instead of selectors ending with '::webkit-scrollbar'",
 };
 
 ruleTester.run("no-scrollbar", noScrollbarRule, {

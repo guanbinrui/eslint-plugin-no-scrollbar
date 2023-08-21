@@ -1,23 +1,22 @@
 // eslint-plugin-no-scrollbar/rules/no-scrollbar.js
 module.exports = {
   meta: {
-    type: "problem",
+    type: 'problem',
     docs: {
-      description:
-        "Disallow '::webkit-scrollbar' and suggest using '[data-no-scrollbar]' instead",
-      category: "Stylistic Issues",
+      description: "Disallow selectors that end with '::webkit-scrollbar' and suggest using '[data-no-scrollbar]' instead",
+      category: 'Stylistic Issues',
       recommended: true,
     },
     schema: [],
   },
   create(context) {
     return {
-      "Property[key.value]": (node) => {
-        if (node.key.value.endsWith("::-webkit-scrollbar")) {
+      'Property[key]': node => {
+        const keyName = node.key.type === 'Literal' ? node.key.value : node.key.name;
+        if (keyName.endsWith('::-webkit-scrollbar')) {
           context.report({
             node,
-            message:
-              "Use '[data-no-scrollbar]' instead of '::webkit-scrollbar'",
+            message: "Use '[data-no-scrollbar]' instead of selectors ending with '::webkit-scrollbar'",
           });
         }
       },
