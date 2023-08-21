@@ -1,0 +1,19 @@
+{
+  "name": "eslint-plugin-no-scrollbar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "eslint": "^8.47.0",
+    "eslint-plugin-eslint-plugin": "^5.1.1"
+  },
+  "peerDependencies": {
+    "eslint": "^8.47.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
