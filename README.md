@@ -22,9 +22,9 @@ In your ESLint configuration (`.eslintrc.js`), add the plugin and enable the rul
 
 ```js
 module.exports = {
-  plugins: ['eslint-plugin-no-scrollbar'],
+  plugins: ["eslint-plugin-no-scrollbar"],
   rules: {
-    'no-scrollbar': 'error',
+    "no-scrollbar": "error",
   },
 };
 ```
@@ -39,7 +39,7 @@ This rule detects the use of `'::webkit-scrollbar'` and suggests using `'[data-n
 
 ```javascript
 const useStyles = () => ({
-    content: {},
+  content: {},
 });
 ```
 
@@ -47,7 +47,7 @@ Examples of invalid code:
 
 ```javascript
 const useStyles = () => ({
-    '::-webkit-scrollbar': {},
+  "::-webkit-scrollbar": {},
 });
 ```
 

@@ -1,7 +1,7 @@
 // .eslintrc.js
 module.exports = {
-  plugins: ['eslint-plugin-no-scrollbar'],
+  plugins: ["eslint-plugin-no-scrollbar"],
   rules: {
-    'no-scrollbar': 'error',
+    "no-scrollbar": "error",
   },
 };
